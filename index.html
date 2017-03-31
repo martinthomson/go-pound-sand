@@ -3,12 +3,19 @@
 <head>
   <title>NO GO POUND SAND!</title>
 <style>
-  body { background-color: #000; color: #ffe; }
-  #no { text-align: center; font-family: 'Comic Sans MS'; font-size: 30vw; }
-  #poundsand { text-align: center; font-family: 'Comic Sans MS'; font-size: 10vw; }
+  body { background-color: #000; color: #ffe; text-align: center; font-family: 'Comic Sans MS'; }
+  #no { font-size: 25vw; }
+  #question { font-size: 5vw; }
+  #poundsand { font-size: 10vw; }
 </style>
+<script>
+window.onload = function(e) {
+  document.getElementById('question').innerText = decodeURIComponent(window.location.hash.replace('#', '')) + '?';
+};
+</script>
 </head>
 <body>
+<div id="question"></div>
 <div id="no">No.</div>
 <div id="poundsand">Go pound sand.</div>
 </body>
